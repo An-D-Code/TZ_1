@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    padding: 20px;
+    background: #f8f8f8;
+    max-width: 590px;
+    border: 13px solid #ebebeb;
+    position: relative;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    color: #787878;
+    padding-bottom: 10px;
+}
+.item {
+    max-width: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing:content-box;
+}
+.active {
+    background-color: #ebf4f7;
+    border: 1px solid #b8d7e2;
+}
+.item label {
+    display: flex;
+    font-family: 'Bebas';
+    font-size: 25px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    justify-content: space-between;
+}
+.left {
+    display: flex;
+    align-items: center;
+}
+.radio {
+    display: none;
+}
+
+.radio:checked+span:before {
+    opacity: 1;
+}
+
+.radio:checked+span {
+    border: 4px solid #34648e;
+}
+
+.fake {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #dadada;
+    border-radius: 50%;
+    position: relative;
+}
+.fake::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: #4bb2d0;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity .1s;
+}
+.name {
+   margin-left: 17px;
+}
+.price {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.line {
+    border: none;
+    background-color: #ccc;
+    color: #ccc;
+    height: 1px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.number form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 15px;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.select select {
+    background: none;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    border: 2px solid #9fc2fb;
+    border-radius: 3px;
+    padding: 6px 38px 6px 5px;
+}
+
+.select::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 3px 0 3px;
+    border-color: #000000 transparent transparent transparent;
+    position: absolute;
+    right: 7px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 40px 0px 25px 0px;
+}
+.total {
+    font-family: 'Bebas';
+    font-size: 28px;
+    color: #777;
+}
+.total mark {
+    background: none;
+    color: #3388a8;
+    position: relative;
+}
+.total mark::after {
+    content: 'US';
+    font-size: 17px;
+    position: absolute;
+    top: 8px;
+}
+.btn {
+    padding: 17px 63px;
+    background: #33a845;
+    border-radius: 30px;
+    color: white;
+    margin-top: 15px;
+    transition: transform .2s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform .2s ease;
+    font-weight: 700;
+}
+.selected {
+    font-size: 20px;
+    color: #449cbd;
+    margin-top: 48px;
+}
+
+/*Modal*/
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(201, 201, 201, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/* .hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+} */
+.modal-content {
+    background-color: rgb(206, 206, 206);
+    padding: 50px 200px;
+    position: relative;
+}
+
+.closeModal {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal-form label {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: 'Bebas';
+}
+
+.modal-form label:first-child {
+    margin: 0;
+}
+
+.modal-form input {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.submit {
+    border-radius: 20px;
+    background: #33a845;
+    color: white;
+    font-size: 15px;
+    margin-top: 20px !important;
+    cursor: pointer;
+}

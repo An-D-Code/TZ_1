@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>ТЗ #1</title>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="list">
+            <li class="item active">
+                <label>
+                    <div class="left">
+                        <input checked class='radio' value="13" type='radio' name="nameradio">
+                        <span class="fake"></span>
+                        <span class="name">LICENSE PLAN: <span class="selectedLicense">#1</span></span>
+                    </div>
+                    <span class="price">$13 per license</span>
+                </label>
+            </li>
+            <li class="item">
+                <label>
+                    <div class="left">
+                        <input class='radio' value="22" type='radio' name="nameradio">
+                        <span class="fake"></span>
+                        <span class="name">LICENSE PLAN: <span class="selectedLicense">#2</span></span>
+                    </div>
+                    <span class="price">$22 per license</span>
+                </label>
+            </li>
+            <li class="item">
+                <label>
+                    <div class="left">
+                        <input class='radio' value="34" type='radio' name="nameradio">
+                        <span class="fake"></span>
+                        <span class="name">LICENSE PLAN: <span class="selectedLicense">#3</span></span>
+                    </div>
+                    <span class="price">$34 per license</span>
+                </label>
+            </li>
+        </ul>
+        <hr class="line">
+        <div class="number">
+            <form action="#">
+                <label class="text" for="#">Number of licenses:</label>
+                <div class="select">
+                    <select>
+                        <option>3</option>
+                        <option>5</option>
+                        <option>10</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <hr class="line">
+        <div class="info">
+            <span class="total">TOTAL: <mark></mark></span>
+            <button href='vk.com' class="btn">BUY NOW</button>
+            <span class="selected"></span>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="closeModal">×</span>
+            <form class="modal-form" action="#">
+                <label for="#">
+                    Your name:
+                    <input required type="name" placeholder="name">
+                </label>
+                <label for="#">
+                    Your number:
+                    <input required type="phone" placeholder="number">
+                </label>
+                <input class="submit" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <li class="item">
+    <label for="#">
+        <input className='check' type='radio'>
+        <span class="name">LICENSE PLAN #2</span>
+    </label>
+    <span class="price">$22 per license</span>
+</li>
+<li class="item">
+    <label for="#">
+        <input className='check' type='radio'>
+        <span class="name">LICENSE PLAN #3</span>
+    </label>
+    <span class="price">$34 per license</span>
+</li> -->
