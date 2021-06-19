@@ -21,6 +21,7 @@ const removeActiveClass = (items) => {
 //Сам функционал переключения между лицензий
 items.forEach((item, i) => {
     item.addEventListener('click', () => {
+        radios[i].checked
         removeActiveClass(items)
         setActiveClass(item)
         calcTotal(i)
@@ -40,7 +41,7 @@ select.addEventListener('change', () => {
 const calcTotal = (i = 0) => {
     total.innerHTML= radios[i].value * select.value
 }
-
+// Отображение выбранной лицензии
 const setSelected = (i = 0) => {
     selected.innerHTML = `Selected plan: ${selectedLicence[i].innerHTML}`
 }
@@ -54,26 +55,20 @@ const modal = document.querySelector('.modal'),
       btn = document.querySelector('.btn'),
       closeModal = document.querySelector('.closeModal');
       
-      
-let modalShown = false
-
+//Функция показа модального окна
 const showModal = () => {
     modal.style.display = 'flex'
     modalShown = true
 }
-
+//Функция скрытия модального окна
 const hideModal = () => {
     modal.style.display = 'none'
     modalShown = false
 }
 
-btn.addEventListener('click', () => {
-    showModal()
-})
+btn.addEventListener('click', showModal)
 
-closeModal.addEventListener('click', () => {
-    hideModal()
-})
+closeModal.addEventListener('click', hideModal)
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
