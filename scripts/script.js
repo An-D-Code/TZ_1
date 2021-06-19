@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
           total = document.querySelector('mark'),
           select = document.querySelector('select'),
           selectedLicence = document.querySelectorAll('.selectedLicense')
-      
-    let activeRadio = document.querySelector('.active .radio')
 
     //Функция, которая устанавливает активный класс
     const setActiveClass = item => {
@@ -59,18 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     //Функция показа модального окна
     const showModal = () => {
         modal.style.display = 'flex'
-        modalShown = true
     }
     //Функция скрытия модального окна
     const hideModal = () => {
         modal.style.display = 'none'
-        modalShown = false
     }
 
     btn.addEventListener('click', showModal)
 
     closeModal.addEventListener('click', hideModal)
-
+//Скрытие модального окна при клике на пустое место за его пределами
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             hideModal()
